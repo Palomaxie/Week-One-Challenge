@@ -1,0 +1,97 @@
+div.main-body{
+  display: grid;
+  grid-template-columns:100px 1fr;
+  grid-template-areas: "navbar mainContent";
+  grid-gap: 200px;
+/*background-color: LightGray;*/
+  color: black;
+}
+
+nav#nav-bar{
+  grid-area: navbar;
+  position: fixed;
+  background-color: #2F4F4F;
+  
+
+}
+
+nav#nav-bar a{
+  display: block;
+  
+  padding:5px;
+  margin: 10px 0;
+  text-decoration: none;
+  color: white;
+ 
+  
+}
+nav#nav-bar ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	/*border: 1px solid #555;*/
+	
+}
+nav#nav-bar li{
+	text-align: center;
+	border-bottom: 1px solid #555;
+}
+
+li a:hover:not(.active){
+	background-color:#FFA500;
+}
+.active{
+	
+	background-color:#4CAF50;
+}
+
+main#main-doc{
+  grid-area: mainContent;
+  background-color: LightGray;
+}
+
+header{
+	font-size: 2em;
+	font-weight: bold;
+	background-color:#00CED1;
+}
+
+code{
+	/*
+	display: block;
+	padding: 20px;
+	background-color: #ccc;	*/
+	display: block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    word-break: normal;
+    overflow-wrap: normal;
+    line-height: 2;
+    background-color: rgb(247, 247, 247);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.scrollbar {
+    background-color: #F5F5F5;
+    float: left;
+    height: 600px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    margin-top: absolute;
+    width: absolute;
+   overflow-y: auto;
+}
+@media screen and (max-width:700px){
+	
+	div.main-body{
+		grid-template-columns:1fr;
+		grid-template-areas: "navbar mainContent";
+	}
+	nav#nav-bar{
+		position:inherit;
+	}
+}
+
